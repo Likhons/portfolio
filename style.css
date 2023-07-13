@@ -445,21 +445,6 @@ margin: 1rem 0 3rem;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Design For Phone */
 /* BREAKPOINTS */
 @media (max-width: 1200px) {
@@ -514,7 +499,7 @@ padding-bottom: 7rem;
 
     .navbar {
         position: fixed;
-        top: 65px;
+        top: 62px;
         left: -100%;
         width: 100%;
         padding: 1rem 3%;
