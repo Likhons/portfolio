@@ -56,7 +56,12 @@ const animateSkills = (entries) => {
                 const targetWidth = bar.getAttribute('data-width');
                 bar.style.width = targetWidth + '%';
             });
-            skillObserver.unobserve(skillsSection); // animate only once
+            if (entry.isIntersecting) {
+    document.querySelectorAll('.skill-progress').forEach(bar => {
+        bar.style.width = bar.getAttribute('data-width') + '%';
+    });
+    skillObserver.disconnect();
+} // animate only once
         }
     });
 };
@@ -179,3 +184,22 @@ themeToggle.addEventListener('click', () => {
     // Save to localStorage
     localStorage.setItem('theme', isLight ? 'light' : 'dark');
 });
+window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+});
+const cursor = document.createElement("div");
+cursor.classList.add("cursor-glow");
+document.body.appendChild(cursor);
+
+document.addEventListener("mousemove", (e) => {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+});
+window.addEventListener("scroll", () => {
+    const scrollTop = document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = (scrollTop / height) * 100;
+
+    document.getElementById("progress-bar").style.width = progress + "%";
+});
+reset: true
