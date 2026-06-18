@@ -3,21 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO improvement -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="Wazid Hasan Likhon - Frontend Developer & CSE Student at Daffodil International University">
     <meta name="keywords" content="frontend developer, web development, portfolio, CSE, Bangladesh">
+    <meta name="theme-color" content="#0d1117">
     <title>Wazid Hasan Likhon | Frontend Developer</title>
 
-    <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://unpkg.com">
-
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="progress-bar"></div>
+
+    <!-- ===== LOADING SCREEN ===== -->
+    <div id="loader">
+        <div class="loader-logo">W<span>.</span>Likhon</div>
+        <div class="loader-bar-wrap">
+            <div class="loader-bar"></div>
+        </div>
+        <p class="loader-text">Loading…</p>
+    </div>
+
+    <!-- ===== PAGE TRANSITION OVERLAY ===== -->
+    <div id="page-transition"></div>
+
+    <!-- ===== PROGRESS BAR ===== -->
+    <div id="progress-bar"></div>
+
     <!-- ===== HEADER ===== -->
     <header class="header" id="header">
         <a href="#" class="logo">W<span>.</span>Likhon</a>
@@ -28,18 +41,18 @@
             <a href="#skills">Skills</a>
             <a href="#services">Services</a>
             <a href="#portfolio">Portfolio</a>
+            <a href="#github">GitHub</a>
             <a href="#contact">Contact</a>
+        
         </nav>
 
         <div class="header-right">
-            <!-- Dark/Light Mode Toggle -->
             <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
                 <i class='bx bx-moon' id="theme-icon"></i>
             </button>
-
-            <div id="menu-icon" aria-label="Toggle menu" role="button">
-    <i class='bx bx-menu'></i>
-</div>
+            <div id="menu-icon" aria-label="Toggle menu" role="button" tabindex="0">
+                <i class='bx bx-menu'></i>
+            </div>
         </div>
     </header>
 
@@ -80,7 +93,7 @@
 
         <div class="home-img">
             <div class="img-glow"></div>
-            <img src="dev 5.png" alt="Wazid Hasan Likhon" loading="lazy">
+            <img src="dev 5.png" alt="Wazid Hasan Likhon" loading="eager">
         </div>
     </section>
 
@@ -119,7 +132,7 @@
         </div>
     </section>
 
-    <!-- ===== SKILLS SECTION (NEW) ===== -->
+    <!-- ===== SKILLS SECTION ===== -->
     <section class="skills" id="skills">
         <h2 class="heading">My <span>Skills</span></h2>
         <p class="section-subtitle">Technologies I work with</p>
@@ -129,92 +142,38 @@
                 <h3>Technical Skills</h3>
 
                 <div class="skill-item">
-                    <div class="skill-info">
-                        <span>HTML5</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="90"></div>
-                    </div>
+                    <div class="skill-info"><span>HTML5</span><span>90%</span></div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
                 </div>
-
                 <div class="skill-item">
-                    <div class="skill-info">
-                        <span>CSS3</span>
-                        <span>85%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="85"></div>
-                    </div>
+                    <div class="skill-info"><span>CSS3</span><span>85%</span></div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
                 </div>
-
                 <div class="skill-item">
-                    <div class="skill-info">
-                        <span>JavaScript</span>
-                        <span>75%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="75"></div>
-                    </div>
+                    <div class="skill-info"><span>JavaScript</span><span>75%</span></div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="75"></div></div>
                 </div>
-
                 <div class="skill-item">
-                    <div class="skill-info">
-                        <span>Responsive Design</span>
-                        <span>88%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="88"></div>
-                    </div>
+                    <div class="skill-info"><span>Responsive Design</span><span>88%</span></div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="88"></div></div>
                 </div>
-
                 <div class="skill-item">
-                    <div class="skill-info">
-                        <span>Graphic Design</span>
-                        <span>70%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="70"></div>
-                    </div>
+                    <div class="skill-info"><span>Graphic Design</span><span>70%</span></div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="70"></div></div>
                 </div>
             </div>
 
             <div class="skills-right">
-                <h3>Tools & Technologies</h3>
+                <h3>Tools &amp; Technologies</h3>
                 <div class="tools-grid">
-                    <div class="tool-card">
-                        <i class='bx bxl-html5'></i>
-                        <span>HTML5</span>
-                    </div>
-                    <div class="tool-card">
-                        <i class='bx bxl-css3'></i>
-                        <span>CSS3</span>
-                    </div>
-                    <div class="tool-card">
-                        <i class='bx bxl-javascript'></i>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="tool-card">
-                        <i class='bx bxl-git'></i>
-                        <span>Git</span>
-                    </div>
-                    <div class="tool-card">
-                        <i class='bx bxl-github'></i>
-                        <span>GitHub</span>
-                    </div>
-                    <div class="tool-card">
-                        <i class='bx bxl-figma'></i>
-                        <i class='bx bx-palette'></i>
-                        <span>Figma</span>
-                    </div>
-                    <div class="tool-card">
-                        <i class='bx bxl-bootstrap'></i>
-                        <span>Bootstrap</span>
-                    </div>
-                    <div class="tool-card">
-                        <i class='bx bx-code-curly'></i>
-                        <span>VS Code</span>
-                    </div>
+                    <div class="tool-card"><i class='bx bxl-html5'></i><span>HTML5</span></div>
+                    <div class="tool-card"><i class='bx bxl-css3'></i><span>CSS3</span></div>
+                    <div class="tool-card"><i class='bx bxl-javascript'></i><span>JavaScript</span></div>
+                    <div class="tool-card"><i class='bx bxl-git'></i><span>Git</span></div>
+                    <div class="tool-card"><i class='bx bxl-github'></i><span>GitHub</span></div>
+                    <div class="tool-card"><i class='bx bxl-figma'></i><span>Figma</span></div>
+                    <div class="tool-card"><i class='bx bxl-bootstrap'></i><span>Bootstrap</span></div>
+                    <div class="tool-card"><i class='bx bx-code-curly'></i><span>VS Code</span></div>
                 </div>
             </div>
         </div>
@@ -227,27 +186,19 @@
 
         <div class="services-container">
             <div class="services-box">
-                <div class="services-icon">
-                    <i class='bx bx-code-alt'></i>
-                </div>
+                <div class="services-icon"><i class='bx bx-code-alt'></i></div>
                 <h3>Web Development</h3>
                 <p>Building fast, responsive, and accessible websites using modern HTML, CSS, and JavaScript best practices.</p>
                 <a href="https://www.codestackr.com/blog/web-development-roadmap-2023" class="btn" target="_blank" rel="noopener">Learn More</a>
             </div>
-
             <div class="services-box">
-                <div class="services-icon">
-                    <i class='bx bx-paint'></i>
-                </div>
+                <div class="services-icon"><i class='bx bx-paint'></i></div>
                 <h3>UI/UX Design</h3>
                 <p>Creating visually appealing interfaces with clean layouts, thoughtful typography, and great user experience.</p>
                 <a href="https://dribbble.com/resources/2023-graphic-design-trends" class="btn" target="_blank" rel="noopener">Learn More</a>
             </div>
-
             <div class="services-box">
-                <div class="services-icon">
-                    <i class='bx bx-line-chart'></i>
-                </div>
+                <div class="services-icon"><i class='bx bx-line-chart'></i></div>
                 <h3>Digital Marketing</h3>
                 <p>Growing online presence through Social Media Marketing, Content Strategy, and Search Engine Optimization.</p>
                 <a href="https://digitalmarketinginstitute.com/blog/what-are-the-top-digital-marketing-trends-for-2023" class="btn" target="_blank" rel="noopener">Learn More</a>
@@ -260,7 +211,6 @@
         <h2 class="heading">Latest <span>Projects</span></h2>
         <p class="section-subtitle">Some of my recent work</p>
 
-        <!-- Filter buttons -->
         <div class="portfolio-filter">
             <button class="filter-btn active" data-filter="all">All</button>
             <button class="filter-btn" data-filter="web">Web Design</button>
@@ -278,7 +228,6 @@
                     </a>
                 </div>
             </div>
-
             <div class="portfolio-box" data-category="web">
                 <img src="portfolio2.jpg" alt="Project 2" loading="lazy">
                 <div class="portfolio-layer">
@@ -289,7 +238,6 @@
                     </a>
                 </div>
             </div>
-
             <div class="portfolio-box" data-category="graphic">
                 <img src="portfolio3.jpg" alt="Project 3" loading="lazy">
                 <div class="portfolio-layer">
@@ -300,7 +248,6 @@
                     </a>
                 </div>
             </div>
-
             <div class="portfolio-box" data-category="web">
                 <img src="portfolio4.jpg" alt="Project 4" loading="lazy">
                 <div class="portfolio-layer">
@@ -311,7 +258,6 @@
                     </a>
                 </div>
             </div>
-
             <div class="portfolio-box" data-category="graphic">
                 <img src="portfolio5.jpg" alt="Project 5" loading="lazy">
                 <div class="portfolio-layer">
@@ -334,35 +280,26 @@
             <div class="contact-info">
                 <div class="contact-info-item">
                     <i class='bx bx-envelope'></i>
-                    <div>
-                        <h4>Email</h4>
-                        <p>wazidlikhon@gmail.com</p>
-                    </div>
+                    <div><h4>Email</h4><p>wazidlikhon@gmail.com</p></div>
                 </div>
                 <div class="contact-info-item">
                     <i class='bx bx-phone'></i>
-                    <div>
-                        <h4>Phone</h4>
-                        <p>+880 1759256575</p>
-                    </div>
+                    <div><h4>Phone</h4><p>+880 1759256575</p></div>
                 </div>
                 <div class="contact-info-item">
                     <i class='bx bx-map'></i>
-                    <div>
-                        <h4>Location</h4>
-                        <p>Dhaka, Bangladesh</p>
-                    </div>
+                    <div><h4>Location</h4><p>Dhaka, Bangladesh</p></div>
                 </div>
             </div>
 
             <form action="https://formspree.io/f/mvojodbp" method="post" class="contact-form">
                 <div class="input-box">
-                    <input type="text" name="Full Name" placeholder="Full Name" required>
-                    <input type="email" name="Email" placeholder="Email Address" required>
+                    <input type="text"  name="Full Name"     placeholder="Full Name"     required>
+                    <input type="email" name="Email"         placeholder="Email Address" required>
                 </div>
                 <div class="input-box">
-                    <input type="tel" name="Mobile Number" placeholder="Mobile Number">
-                    <input type="text" name="Email Subject" placeholder="Subject">
+                    <input type="tel"   name="Mobile Number" placeholder="Mobile Number">
+                    <input type="text"  name="Email Subject" placeholder="Subject">
                 </div>
                 <textarea name="User Message" rows="8" placeholder="Your Message" required></textarea>
                 <input type="submit" value="Send Message" class="btn">
@@ -377,7 +314,6 @@
                 <a href="#" class="logo">W<span>.</span>Likhon</a>
                 <p>Frontend Developer & CSE Student passionate about creating beautiful web experiences.</p>
             </div>
-
             <div class="footer-links">
                 <h4>Quick Links</h4>
                 <a href="#home">Home</a>
@@ -386,13 +322,12 @@
                 <a href="#portfolio">Portfolio</a>
                 <a href="#contact">Contact</a>
             </div>
-
             <div class="footer-social">
                 <h4>Follow Me</h4>
                 <div class="social-icons">
                     <a href="https://www.facebook.com/Wazid.Official1" target="_blank" rel="noopener" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
-                    <a href="https://instagram.com/hasanwazid" target="_blank" rel="noopener" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
-                    <a href="https://github.com/Likhons" target="_blank" rel="noopener" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://instagram.com/hasanwazid"          target="_blank" rel="noopener" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://github.com/Likhons"                target="_blank" rel="noopener" aria-label="GitHub"><i class='bx bxl-github'></i></a>
                     <a href="https://www.youtube.com/channel/UCyM6jYpH5CgvLDOHUL7vHng" target="_blank" rel="noopener" aria-label="YouTube"><i class='bx bxl-youtube'></i></a>
                 </div>
             </div>
@@ -406,9 +341,11 @@
         </div>
     </footer>
 
-    <!-- Scripts — loaded at end for performance -->
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Scripts -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="script.js"></script>
+    <script src="particles.js"></script>
+     <script src="github.js"></script>
+ 
 </body>
 </html>
